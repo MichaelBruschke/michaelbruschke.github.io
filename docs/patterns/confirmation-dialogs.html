@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Osirium Interface Design Guidelines</title>
+<link rel="stylesheet" href="../style.css" type="text/css" media="all" />
+<!--    fontawesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+<!--    jquery-->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<!--THIS IS A TEMPLATE PAGE FOR:
+    PATTERNS
+    >(SPECIFIC TOPIC)
+-->
+
+<body>
+
+<div class="wrapper">
+    <div>
+        <script id="replace_with_navbar" src="../nav/nav.js"></script>
+    </div>
+    <div class="main_content">
+        <div class="fixed-header">
+            Osirium Interface Design Guidelines <i class="fa-solid fa-chevron-right breadcrumb"></i> Patterns
+        </div>
+
+        <div id="container">
+    <!--Inner nav>-->
+            <div>
+                <div>
+                    <script id="replace_with_inset-subnav-patterns"></script>
+                </div>
+    
+            </div>
+    <!--BODY CONTENT-->
+            <div>
+                <div class="info">
+                    <h1>Confirmation Dialogs</h1><br>
+                    <p>A confirmation dialog asks users whether they are sure that they want to proceed with a command that they have just issued to a system.<br><br>
+                    </p>
+                    <div class="example_pane">
+                        <div class="modal-static">
+                            <!-- modal content -->
+                            <div class="modal-static-content">
+                                <div class="modal-static-header">
+                                <span>Prune the template library<span class="close"><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+    
+                                <div class="modal-static-body">
+                                
+                                This will remove unused templates with a ‘.0’ version that have been superseded by a newer ‘.0’ version. 
+                                <br><br>
+                                Customised templates with versions not ending in ‘.0’ will be retained.
+                                
+                                </div>
+    
+                                <div class="modal-static-footer">
+                                <a class="btn ripple">PRUNE</a><a class="btn ripple secondary" id="btnCancel">CANCEL</a>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <!--
+                    <IMG SRC="/patterns/confirmation-dialog-1.png"><br>
+                    -->
+                    <h2>When to use this pattern</h2>
+                    <p>Use this pattern to highlight the potentially serious consequences of performing an action, such as unprovisioning a device or assigning excess privileges to users.<br>
+                    </p>
+                    <p>This will allow users a second chance to check their work before proceeding with a dangerous action. However, it’s not a second chance at all if users automate their response to the conformation and simply click Yes without thinking further.   
+                    </p>
+                    <h2>When not to use this pattern</h2>
+                    <p>Do not use confirmation dialogs for routine actions.<br>
+                    </p>
+                    <p>Double confirmation dialogs present an interruption initiated by the system; they slow down the user’s task flow. If this delay prevents an error, then it’s time well spent, but, if not, they are disruptive and thus annoying.   
+                    </p>
+                    <h2>Pattern checklist</h2>
+                    <p>You should help users find out whether or not they want to perform a risky action as soon as you can.
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Provide a title that conveys the event, and calls to action that match. </li>
+                        <li>Be specific and inform users about the consequence of their action. Do not ask "Are you sure you want to do this?" Instead, explain what this is, in user-centric terms that are easy to understand and make it likely that the user would recognize a risk.</li>
+                        <li>Instead of Yes/No answers, provide response options that summarise what will happen for each possible response. For example, in the case of file deletion, use buttons labeled “Delete file” and “Keep file”.</li>
+                        <li>Avoid giving confirmation dialogs a default Yes answer.</li>
+                        <li>For particularly dangerous operations, require a nonstandard action from the user to confirm. Rather than simply clicking an OK button (or, better, a button with a word or two to describe the action) — which risks becoming an automated behaviour — have people do something they would normally not do. For example, type a word into a box.</li>
+                        <li>Consider an option that allows the user to bypass future routine confirmations. (Such as ‘Don't ask me this again’.)</li>
+                    </ul>
+                    <h2>Test the dialog with real users</h2>
+                    <p>Test your copy with real users. You will likely need to iterate 2-4 times to get the right pattern.  Each iteration can be tested with 4-5 participants to assess the intuitiveness of the interaction and copy. 
+                    </p>
+                    <h2>Pattern anatomy</h2>
+                    <p>This is a general guideline for designing your modal.<br>
+                    </p>
+                    <div class="example_pane">
+                        <div class="modal-static">
+                            <!-- modal content -->
+                            <div class="modal-static-content" style="width:540px; max-width:600px">
+                                <div class="modal-static-header">
+                                <span>(Action statement including verb)<span class="close"><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+    
+                                <div class="modal-static-body">
+                                
+                                (2-3 sentences stating what the action will do or additional context relative to the user's perspective.) 
+                                
+                                </div>
+    
+                                <div class="modal-static-footer">
+                                <a class="btn ripple">(Affirmative verb)</a><a class="btn ripple secondary" id="btnCancel">(Other)</a><a class="btn ripple secondary" id="btnCancel">(Negative verb)</a>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <ul class="bullet-list">
+                        <li>"Affirmative" verb is left-most. This proceeds with the action.</li>
+                        <li>"Negative verb" is right-most. This cancels the action."</li>
+                        <li>Primary action uses the primary button style. This is usually the affirmative action, but not always.</li>
+                        <li>Primary focus for destructive actions should be on the "negative action".</li>
+                        <li>All bottons reside on a single bottom row, aligned right with 12px between each button.</li>
+                        <li>The general width for a dialog is 360. Width can increase if necessary in increments of 60px.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+    <!--righthand margin-->
+            
+                <div>
+                    <p><span class="warning" style="max-width: 180px;">Prototype. Feedback welcome to Michael and Flavio via slack, or design@osirium.com</span></p>
+                </div>
+            
+        </div>         
+    </div>
+</div>
+
+</body>
+</html>
