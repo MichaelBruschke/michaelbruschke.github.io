@@ -10,7 +10,7 @@ fetch('../nav/nav.html')
 fetch('../nav/nav_content_visual.html')
 .then(res => res.text())
 .then(text => {
-    let oldelem = document.querySelector("script#replace_with_inset-subnav-style");
+    let oldelem = document.querySelector("script#replace_with_inset-subnav-visual");
     let newelem = document.createElement("div");
     newelem.innerHTML = text;
     oldelem.parentNode.replaceChild(newelem,oldelem);
