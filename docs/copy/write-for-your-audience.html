@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Osirium Interface Design Guidelines</title>
+<link rel="stylesheet" href="../style.css" type="text/css" media="all" />
+<!--    fontawesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+<!--    jquery-->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+    <div>
+        <script id="replace_with_navbar" src="../nav/nav.js"></script>
+    </div>
+    <div class="main_content">
+        <div class="fixed-header">
+            Osirium Interface Design Guidelines <i class="fa-solid fa-chevron-right breadcrumb"></i> Copy style
+        </div>
+
+        <div id="container">
+          <div><!--COL 1: INNER NAV>-->
+            <div>
+              <script id="replace_with_inset-subnav-copy"></script>
+            </div>
+          </div>
+          <div><!--COL 2: TOPIC CONTENT-->
+            <div class="info">
+              <h1>Write for your audience</h1><br>
+                <p>
+                  When writing for Osirium, using plain language allows users to find what they need, understand what they have found, and then use it to meet their needs. 
+                  <br>
+                  <br>
+                  Users come to Osirium products with a specific task in mind. When developing copy, keep users’ tasks in mind and write to ensure you are helping them to complete that task. Otherwise, they may lose focus and search elsewhere or even reach out to Osirium support for (what should be) a simple task. This can cause frustration as it delays the task they need to accomplish.
+                </p>
+            </div>
+            <br>  
+            <!--TIP BEGIN-->
+            <div class="info">
+              <h2>Short and sweet</h2>
+              <p>
+                  Users scan text, skipping over wordy blocks of text. Don't sacrafice necessary information, just don't use more words than you have to. Rely on understanding the user's context to omit unnecessary extra words. 
+              </p>
+              <table class="dodont">
+              <tr>
+                <th class="do"><i class="fa-solid fa-check"></i> Do</th>
+                <th class="dont"><i class="fa-solid fa-hand"></i> Don't</th>
+              </tr>
+              <tr>
+                <td>
+                    PAM will always use uppercase, lowercase and digits when generating a password. You can add additional charcters below. 
+                  </td>
+                  <td>
+                    If you would like to modify the Active Directory password generation model, use this form to define the length and additional special characters for PAM to use. Uppercase, lowercase and digits are already included.
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <br>
+            <!--TIP END-->
+            <!--TIP BEGIN-->
+            <div class="info">
+              <h2>Emphasise action</h2>
+                <p>
+                Users take action when they use our apps. The app takes action when it responds to the user. Your copy should use the active voice throughout the app. People and functions should be described as doing things, instead of having things done to them.
+                </p>
+              <table class="dodont">
+                <tr>
+                  <th class="do"><i class="fa-solid fa-check"></i> Do</th>
+                  <th class="dont"><i class="fa-solid fa-hand"></i> Don't</th>
+                </tr>
+                <tr>
+                  <td>
+                    Building a playbook creates a task.  
+                  </td>
+                  <td>
+                    A task is created in the Tasks page when a playbook is built.
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <br>
+            <!--TIP END-->
+          </div><!--COL 2 END-->
+          <div><!--COL 3-->
+            <div>
+              <p><span class="warning" style="max-width: 180px;">Prototype. Feedback welcome to Michael and Flavio via slack, or design@osirium.com</span></p>
+            </div>
+          </div><!--COL 3 END-->        
+        </div><!--CLOSES 3-col container-->        
+      </div><!--CLOSES main_content--> 
+  </div><!--CLOSES wrapper--> 
+  
+</body>
+</html>
